@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sortingvisualizer/data/constants.dart';
-import 'package:sortingvisualizer/utils/utils.dart';
+import '../data/constants.dart';
+import '../utils/utils.dart';
 
 class SortingDropdown extends StatelessWidget {
   final String _value;
@@ -41,6 +41,6 @@ class SortingDropdown extends StatelessWidget {
         ),
       ),
     );
-    ;
+
   }
 }

@@ -1,5 +1,5 @@
 import 'package:meta/meta.dart';
-import 'package:sortingvisualizer/data/constants.dart';
+import '../data/constants.dart';
 
 String getSortingTypeString({@required SortingType sortingTypes}) {
   switch (sortingTypes) {

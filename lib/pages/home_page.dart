@@ -3,12 +3,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:sortingvisualizer/bloc/input_bloc/input_bloc.dart';
-import 'package:sortingvisualizer/bloc/theme_bloc/theme_bloc.dart';
-import 'package:sortingvisualizer/data/constants.dart';
-import 'package:sortingvisualizer/pages/sorting_page.dart';
-import 'package:sortingvisualizer/provider/sorting_provider.dart';
-import 'package:sortingvisualizer/widgets/theme_change_icon.dart';
+import '../bloc/input_bloc/input_bloc.dart';
+import '../bloc/theme_bloc/theme_bloc.dart';
+import '../data/constants.dart';
+import '../pages/sorting_page.dart';
+import '../provider/sorting_provider.dart';
+import '../widgets/theme_change_icon.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
     );
 
     return BlocBuilder<ThemeBloc, ThemeMode>(
-        cubit: themeBloc,
+        bloc:  themeBloc,
         builder: (BuildContext context, ThemeMode themeMode) {
           Widget icon = ThemeChangingIcon(themeMode: themeMode);
           String themeChangerToolTip = themeMode == ThemeMode.light ? "Change to Dark Theme" : "Change to Light Theme";
@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               body: BlocConsumer<InputBloc, AbstractInputState>(
-                cubit: inputBloc,
+                bloc: inputBloc,
                 listener:
                     (BuildContext context, AbstractInputState inputState) {
                   if (inputState is VisualizeInputState) {

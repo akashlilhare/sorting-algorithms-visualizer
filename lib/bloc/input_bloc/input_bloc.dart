@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sortingvisualizer/bloc/input_bloc/events/input_event.dart';
-import 'package:sortingvisualizer/bloc/input_bloc/states/input_state.dart';
+import 'package:sorting_visualizer/bloc/input_bloc/states/input_state.dart';
+
+import 'events/input_event.dart';
 
 export '../input_bloc/events/input_event.dart';
 export '../input_bloc/states/input_state.dart';

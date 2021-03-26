@@ -1,13 +1,20 @@
+import 'dart:html';
+import 'dart:io' as Plt;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:sortingvisualizer/bloc/input_bloc/input_bloc.dart';
-import 'package:sortingvisualizer/bloc/theme_bloc/theme_bloc.dart';
-import 'package:sortingvisualizer/pages/home_page.dart';
+import 'package:path_provider/path_provider.dart';
+import '../bloc/input_bloc/input_bloc.dart';
+import '../bloc/theme_bloc/theme_bloc.dart';
+import '../pages/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  HydratedCubit.storage = await HydratedStorage.build();
+  HydratedBloc.storage = await HydratedStorage.build(
+
+    storageDirectory:Plt.Platform.isAndroid? await getTemporaryDirectory():window.localStorage,
+  );
   runApp(Wrapper());
 }
 

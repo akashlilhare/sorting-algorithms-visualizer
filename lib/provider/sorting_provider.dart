@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
-import 'package:sortingvisualizer/data/constants.dart';
+import '../data/constants.dart';
 
 class SortingProvider extends ChangeNotifier {
   final int _size;

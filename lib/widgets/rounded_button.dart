@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sortingvisualizer/data/constants.dart';
+import '../data/constants.dart';
 
 class RoundedButton extends StatelessWidget {
   final String _text;

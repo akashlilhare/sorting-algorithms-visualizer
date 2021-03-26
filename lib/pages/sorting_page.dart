@@ -4,14 +4,14 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:sortingvisualizer/bloc/theme_bloc/theme_bloc.dart';
-import 'package:sortingvisualizer/data/constants.dart';
-import 'package:sortingvisualizer/provider/sorting_provider.dart';
-import 'package:sortingvisualizer/utils/utils.dart';
-import 'package:sortingvisualizer/widgets/bar.dart';
-import 'package:sortingvisualizer/widgets/rounded_button.dart';
-import 'package:sortingvisualizer/widgets/sorting_dropdown.dart';
-import 'package:sortingvisualizer/widgets/theme_change_icon.dart';
+import '../bloc/theme_bloc/theme_bloc.dart';
+import '../data/constants.dart';
+import '../provider/sorting_provider.dart';
+import '../utils/utils.dart';
+import '../widgets/bar.dart';
+import '../widgets/rounded_button.dart';
+import '../widgets/sorting_dropdown.dart';
+import '../widgets/theme_change_icon.dart';
 
 class SortingPage extends StatelessWidget {
   @override
