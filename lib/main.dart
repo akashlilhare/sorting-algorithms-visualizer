@@ -1,5 +1,6 @@
-import 'dart:html';
-import 'dart:io' as Plt;
+
+import 'package:flutter/foundation.dart';
+import 'package:universal_html/html.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,8 +13,12 @@ import '../pages/home_page.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   HydratedBloc.storage = await HydratedStorage.build(
+storageDirectory:(kIsWeb) ?
+window.localStorage['mypref']
+   :
+  await getTemporaryDirectory()
 
-    storageDirectory:Plt.Platform.isAndroid? await getTemporaryDirectory():window.localStorage,
+    //storageDirectory:Plt.Platform.isAndroid? await getTemporaryDirectory():window.localStorage['mypref'],
   );
   runApp(Wrapper());
 }
