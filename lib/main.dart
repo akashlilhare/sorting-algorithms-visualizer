@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
-import '../bloc/input_bloc/input_bloc.dart';
-import '../bloc/theme_bloc/theme_bloc.dart';
-import '../pages/home_page.dart';
+
+import 'bloc/input_bloc/input_bloc.dart';
+import 'bloc/theme_bloc/theme_bloc.dart';
+import 'pages/home_page.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
